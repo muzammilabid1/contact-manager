@@ -36,7 +36,13 @@ let localArr = getLocal() || [];
 
 //** add to local **
 const addToLocal = (obj) => {
-    localStorage.setItem("contact", JSON.stringify(obj));
+    try {
+        localStorage.setItem("contact", JSON.stringify(obj));
+        alert("✅ Saved successfully!");
+    } catch (err) {
+        alert("❌ Error: " + err.name);
+        alert(err.message);
+    }
 }
 
 //**   signup **
@@ -237,7 +243,11 @@ const contactAdd = () => {
             notes: getValue("#notes")
         };
         user.contact.push(contactObj);
+
         addToLocal(users);
+
+        alert("Going to dashboard...");
+
         window.location.href = "dashboard.html";
     }
     reader.readAsDataURL(file);

@@ -1,4 +1,9 @@
-
+if (
+  localStorage.getItem("currentUser") &&
+  window.location.pathname.endsWith("index.html")
+) {
+  window.location.href = "dashboard.html";
+}
 //Dom elements
 const loginForm = document.querySelector(".login-form");
 const signupForm = document.querySelector(".signup-form");
@@ -603,6 +608,14 @@ const search = (e) => {
     name.forEach(elem => toDisplay(elem));
 }
 
+
+//delete user when not login
+if (
+  !localStorage.getItem("currentUser") &&
+  window.location.pathname.endsWith("dashboard.html")
+) {
+  window.location.href = "index.html";
+}
 //?? <----       ..........     --------->  ??//
 //** event listener **//
 //?? <----       ..........     --------->  ??//

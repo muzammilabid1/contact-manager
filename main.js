@@ -206,6 +206,10 @@ const contactAdd = () => {
         alert("Please upload a profile picture.");
         return;
     }
+    if (file.size > 500000) {
+      alert("Image must be less than 500KB");
+      return;
+    }
     const reader = new FileReader();
     reader.onload = function () {
 

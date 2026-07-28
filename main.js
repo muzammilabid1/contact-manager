@@ -206,8 +206,8 @@ const contactAdd = () => {
         alert("Please upload a profile picture.");
         return;
     }
-    if (file.size > 500000) {
-      alert("Image must be less than 500KB");
+    if (file.size > 200000) {
+      alert("Image must be less than 200KB"");
       return;
     }
     const reader = new FileReader();
@@ -247,10 +247,8 @@ const contactAdd = () => {
             notes: getValue("#notes")
         };
         user.contact.push(contactObj);
-
         addToLocal(users);
-
-        alert("Going to dashboard...");
+        window.location.href = "dashboard.html";
 
         window.location.href = "dashboard.html";
     }

@@ -37,6 +37,7 @@ let localArr = getLocal() || [];
 //** add to local **
 const addToLocal = (obj) => {
     try {
+        alert("Storage size: " + (data.length / 1024).toFixed(2) + " KB");
         localStorage.setItem("contact", JSON.stringify(obj));
         alert("✅ Saved successfully!");
     } catch (err) {

@@ -200,14 +200,12 @@ const getValue = (s) => {
 
 //** ADD contact */
 const contactAdd = () => {
-  alert("contactAdd is running");
   const imgTag = document.querySelector(".profile-preview").firstElementChild;
   const profile = document.querySelector("#profile-image");
   const email = getValue("#email");
   const phoneNum = getValue("#phone");
   const alternatePhoneNum = getValue("#alternate-phone");
   const file = profile.files[0];
-  alert(`Your image size is ${(file.size / 1024).toFixed(2)} KB`);
   if (!file) {
     alert("Please upload a profile picture.");
     return;
@@ -216,6 +214,7 @@ const contactAdd = () => {
     alert("Please upload an image.");
     return;
   }
+  alert(`Your image size is ${(file.size / 1024).toFixed(2)} KB`);
   if (file.size > 200000) {
     alert("Image must be less than 200KB");
     return;

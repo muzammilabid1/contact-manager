@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact Manager | Edit Contact</title>
+
+    <!-- Favicon -->
+
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+    />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="editcontact.css" />
+  </head>
+
+  <body>
+    <main>
+      <section class="section-edit-contact">
+        <div class="container">
+          <div class="edit-wrapper">
+            <!--===== Header =====-->
+
+            <div class="edit-header">
+              <a href="dashboard.html" class="back-link">
+                <i class="ri-arrow-left-line"></i>
+                Back Dashboard
+              </a>
+
+              <div class="header-content">
+                <h1 class="common-heading">Edit Contact</h1>
+
+                <p class="common-para">Update contact information</p>
+              </div>
+            </div>
+
+            <!--===== Form =====-->
+
+            <form class="edit-form">
+              <!-- Profile Picture -->
+
+              <div class="profile-upload">
+                <div class="profile-preview">
+                  <img src="" alt="Profile Picture" class="picture"/>
+                </div>
+
+                <label class="upload-btn">
+                  <i class="ri-upload-2-line"></i>
+
+                  Change Picture
+
+                  <input type="file" class="pic-input" hidden />
+                </label>
+              </div>
+
+              <!-- Name Fields -->
+
+              <div class="form-grid">
+                <div class="input-group">
+                  <label for="first-name"> First Name </label>
+
+                  <input type="text" id="first-name"  />
+                </div>
+
+                <div class="input-group">
+                  <label for="last-name"> Last Name </label>
+
+                  <input type="text" id="last-name"  />
+                </div>
+
+                <div class="input-group">
+                  <label for="email"> Email </label>
+
+                  <input type="email" id="email" />
+                </div>
+
+                <div class="input-group">
+                  <label for="phone"> Phone Number </label>
+
+                  <input type="tel" id="phone"  />
+                </div>
+
+                <div class="input-group">
+                  <label for="alternate-phone"> Alternate Phone Number </label>
+
+                  <input
+                    type="tel"
+                    id="alternate-phone"
+                    
+                  />
+                </div>
+
+                <div class="input-group">
+                  <label for="dob"> Date of Birth </label>
+
+                  <input type="date" id="dob" />
+                </div>
+
+                <div class="input-group">
+                  <label for="gender"> Gender </label>
+
+                  <select id="gender">
+                    <option value="male">Male</option>
+
+                    <option value="female">Female</option>
+
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="input-group">
+                  <label for="company"> Company </label>
+
+                  <input
+                    type="text"
+                    id="company"
+                    
+                  />
+                </div>
+
+                <div class="input-group">
+                  <label for="job-title"> Job Title </label>
+
+                  <input type="text" id="job-title" />
+                </div>
+              </div>
+
+              <!-- Address -->
+
+              <div class="input-group full-width">
+                <label for="address"> Address </label>
+
+                <input type="text" id="address" />
+              </div>
+
+              <div class="form-grid">
+                <div class="input-group">
+                  <label for="city"> City </label>
+
+                  <input type="text" id="city"  />
+                </div>
+
+                <div class="input-group">
+                  <label for="country"> Country </label>
+
+                  <input type="text" id="country"  />
+                </div>
+              </div>
+
+              <!-- Notes -->
+
+              <div class="input-group">
+                <label for="notes"> Notes </label>
+
+                <textarea id="notes" rows="5">
+                 
+                </textarea
+                >
+              </div>
+
+              <!-- Button -->
+
+              <button type="submit" class="btn btn-primary update-btn">
+                <i class="ri-save-line"></i>
+
+                Update Contact
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

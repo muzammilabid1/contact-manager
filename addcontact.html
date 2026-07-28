@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact Manager | Add Contact</title>
+
+    <!-- Favicon -->
+
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+    />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="addcontact.css" />
+  </head>
+
+  <body>
+    <main>
+      <section class="section-add-contact">
+        <div class="container">
+          <div class="add-wrapper">
+            <!--===== Header =====-->
+
+            <div class="add-header">
+              <a href="dashboard.html" class="back-link">
+                <i class="ri-arrow-left-line"></i>
+                Back Dashboard
+              </a>
+
+              <div class="header-content">
+                <h1 class="common-heading">Add Contact</h1>
+                <p class="common-para">Add contact information</p>
+              </div>
+            </div>
+
+            <!--===== Form =====-->
+
+            <form class="add-form">
+              <!-- Profile Picture -->
+
+              <div class="profile-upload">
+                <div class="profile-preview">
+                  <img src="./assets/images/user.png" alt="Profile Picture" class="img-tag--addcontact"/>
+                </div>
+
+                <label class="upload-btn">
+                  <i class="ri-upload-2-line"></i>
+
+                  Upload Picture
+
+                  <input
+                    type="file"
+                    id="profile-image"
+                    accept="image/*"
+                    hidden
+                  />
+                </label>
+              </div>
+
+              <!-- Name Fields -->
+
+              <div class="form-grid">
+                <div class="input-group">
+                  <label for="first-name"> First Name </label>
+
+                  <input type="text" id="first-name" placeholder="Ali" required/>
+                </div>
+
+                <div class="input-group">
+                  <label for="last-name"> Last Name </label>
+
+                  <input type="text" id="last-name" placeholder="Khan" required/>
+                </div>
+
+                <div class="input-group">
+                  <label for="email"> Email </label>
+
+                  <input type="email" id="email" placeholder="ali@gmail.com" required/>
+                </div>
+
+                <div class="input-group">
+                  <label for="phone"> Phone Number </label>
+
+                  <input type="tel" id="phone" placeholder="03001234567" required/>
+                </div>
+
+                <div class="input-group">
+                  <label for="alternate-phone"> Alternate Phone Number </label>
+
+                  <input
+                    type="tel"
+                    id="alternate-phone"
+                    placeholder="03129876543"
+                    required
+                  />
+                </div>
+
+                <div class="input-group">
+                  <label for="dob"> Date of Birth </label>
+
+                  <input type="date" id="dob" required/>
+                </div>
+
+                <div class="input-group">
+                  <label for="gender"> Gender </label>
+
+                  <select id="gender">
+                    <option value="male">Male</option>
+
+                    <option value="female">Female</option>
+
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="input-group">
+                  <label for="company"> Company </label>
+
+                  <input
+                    type="text"
+                    id="company"
+                    placeholder="ABC Technologies"
+                    required
+                  />
+                </div>
+
+                <div class="input-group">
+                  <label for="job-title"> Job Title </label>
+
+                  <input type="text" id="job-title" placeholder="Manager" required/>
+                </div>
+              </div>
+
+              <!-- Address -->
+
+              <div class="input-group full-width">
+                <label for="address"> Address </label>
+
+                <input type="text" id="address" placeholder="Street 10" required/>
+              </div>
+
+              <div class="form-grid">
+                <div class="input-group">
+                  <label for="city"> City </label>
+
+                  <input type="text" id="city" placeholder="Karachi" required/>
+                </div>
+
+                <div class="input-group">
+                  <label for="country"> Country </label>
+
+                  <input type="text" id="country" placeholder="Pakistan" required/>
+                </div>
+              </div>
+
+              <!-- Notes -->
+
+              <div class="input-group">
+                <label for="notes"> Notes </label>
+
+                <textarea id="notes" rows="5" placeholder="Important contact" required>
+                  
+                </textarea>
+              </div>
+
+              <!-- Button -->
+
+              <button type="submit" class="btn btn-primary Add-btn">
+                <i class="ri-save-line"></i>
+
+                Add Contact
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

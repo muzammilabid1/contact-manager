@@ -1,0 +1,239 @@
+/* ******************************************
+            Root Variables
+******************************************* */
+
+:root {
+  /*===== Colors =====*/
+
+  --primary-color: #2563eb;
+  --primary-dark: #1d4ed8;
+
+  --white-color: #ffffff;
+  --bg-color: #f8fafc;
+
+  --heading-color: #0f172a;
+  --text-color: #475569;
+  --text-light: #64748b;
+
+  --border-color: #e2e8f0;
+
+  /*===== Border Radius =====*/
+
+  --radius-sm: 0.8rem;
+  --radius-md: 1.2rem;
+  --radius-lg: 2rem;
+
+  /*===== Shadow =====*/
+
+  --shadow-sm: 0 0.5rem 1rem rgba(15, 23, 42, 0.05);
+
+  --shadow-md: 0 1rem 3rem rgba(15, 23, 42, 0.08);
+
+  --shadow-lg: 0 2rem 5rem rgba(15, 23, 42, 0.12);
+
+  /*===== Transition =====*/
+
+  --transition: all 0.3s ease;
+}
+
+/* ******************************************
+                Reset
+******************************************* */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(96, 165, 250, 0.18),
+      transparent 35%
+    ),
+    #f8fafc;
+
+  color: var(--text-color);
+  overflow-x: hidden;
+
+  position: relative;
+}
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  filter: blur(10rem);
+  z-index: -1;
+  -webkit-filter: blur(10rem);
+}
+
+body::before {
+  top: -12rem;
+  left: -12rem;
+
+  background: rgba(37, 99, 235, 0.22);
+}
+
+body::after {
+  bottom: -12rem;
+  right: -12rem;
+
+  background: rgba(59, 130, 246, 0.18);
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+/* ******************************************
+            Reusable Classes
+******************************************* */
+
+.container {
+  width: min(100%, 120rem);
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.common-heading {
+  font-size: clamp(2.8rem, 4vw, 3.8rem);
+  font-weight: 700;
+  color: var(--heading-color);
+  line-height: 1.2;
+}
+
+.common-para {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+/* ******************************************
+                Buttons
+******************************************* */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 5.6rem;
+
+  border-radius: var(--radius-md);
+
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+
+  &:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-0.2rem);
+    -webkit-transform: translateY(-0.2rem);
+    -moz-transform: translateY(-0.2rem);
+    -ms-transform: translateY(-0.2rem);
+    -o-transform: translateY(-0.2rem);
+  }
+}
+
+/* ******************************************
+            Form Elements
+******************************************* */
+
+label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+input {
+  width: 100%;
+  height: 5.6rem;
+
+  border: 0.1rem solid var(--border-color);
+  border-radius: var(--radius-md);
+
+  padding-inline: 5rem;
+
+  font-size: 1.5rem;
+
+  transition: var(--transition);
+
+  &::placeholder {
+    color: #94a3b8;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.3rem rgba(37, 99, 235, 0.15);
+  }
+}
+
+/* ******************************************
+            Responsive
+******************************************* */
+
+@media (width <= 768px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (width <= 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    padding-inline: 1.5rem;
+  }
+}

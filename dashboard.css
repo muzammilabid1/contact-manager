@@ -1,0 +1,547 @@
+/* ******************************************
+            Dashboard Section
+******************************************* */
+
+.section-dashboard {
+  min-height: 100vh;
+
+  padding-block: 3rem;
+
+  & .container {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3rem;
+  }
+
+  /* ******************************************
+            Dashboard Header
+******************************************* */
+
+  & .dashboard-header {
+    
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 2rem 3rem;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    backdrop-filter: blur(2rem);
+
+    -webkit-backdrop-filter: blur(2rem);
+
+    border: 0.1rem solid rgba(255, 255, 255, 0.7);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Brand */
+
+  & .brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    color: var(--heading-color);
+
+    & .logo {
+      width: 5.5rem;
+
+      height: 5.5rem;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: var(--radius-md);
+
+      background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--primary-dark)
+      );
+
+      box-shadow: 0 1rem 2rem rgba(37, 99, 235, 0.25);
+
+      & i {
+        font-size: 2.8rem;
+
+        color: var(--white-color);
+      }
+    }
+
+    & h2 {
+      font-size: 2rem;
+
+      font-weight: 700;
+    }
+  }
+
+  /* User Area */
+
+  & .user-area {
+    
+    display: flex;
+
+    align-items: center;
+
+    gap: 2rem;
+  }
+
+  & .user-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+
+    font-size: 1.5rem;
+
+    font-weight: 600;
+
+    color: var(--heading-color);
+
+    & i {
+      font-size: 2rem;
+
+      color: var(--primary-color);
+    }
+  }
+
+  .logout-btn {
+    width: auto;
+
+    height: 4.5rem;
+
+    padding-inline: 2rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+
+    background: white;
+
+    border: 0.1rem solid var(--border-color);
+
+    transition: var(--transition);
+
+    &:hover {
+      background-color: var(--primary-color);
+
+      color: white;
+
+      transform: translateY(-0.3rem);
+    }
+  }
+
+  /* ******************************************
+            Welcome Card
+******************************************* */
+
+  & .welcome-card {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 4rem;
+
+    background: linear-gradient(
+      135deg,
+      rgba(37, 99, 235, 0.15),
+      rgba(255, 255, 255, 0.8)
+    );
+
+    border: 0.1rem solid var(--border-color);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+  }
+
+  & .welcome-icon {
+    width: 10rem;
+
+    height: 10rem;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--primary-dark)
+    );
+
+    animation: floating 3s infinite ease-in-out;
+
+    & i {
+      font-size: 4.5rem;
+
+      color: white;
+    }
+  }
+
+  @keyframes floating {
+    50% {
+      transform: translateY(-1rem);
+    }
+  }
+
+  /* ******************************************
+            Contact Section
+******************************************* */
+
+  & .contact-section {
+    padding: 3rem;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: var(--radius-lg);
+
+    border: 0.1rem solid var(--border-color);
+
+    box-shadow: var(--shadow-sm);
+  }
+
+  & .contact-header {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 3rem;
+
+    & h2 {
+      font-size: 2.6rem;
+
+      color: var(--heading-color);
+    }
+
+    & .btn {
+      width: auto;
+
+      padding-inline: 2rem;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 0.8rem;
+    }
+  }
+
+  /* ******************************************
+            Search
+******************************************* */
+
+  & .search-box {
+    position: relative;
+
+    margin-bottom: 3rem;
+
+    & i {
+      position: absolute;
+
+      left: 1.8rem;
+
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      font-size: 2rem;
+
+      color: var(--text-light);
+    }
+
+    & input {
+      padding-left: 5rem;
+    }
+  }
+
+  /* ******************************************
+            Contact Card
+******************************************* */
+
+  & .contact-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2rem;
+  }
+
+  & .contact-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 2.5rem;
+
+    padding: 2.5rem;
+
+    background: white;
+
+    border: 0.1rem solid var(--border-color);
+
+    border-radius: var(--radius-md);
+
+    transition: var(--transition);
+
+    &:hover {
+      transform: translateY(-0.7rem);
+
+      box-shadow: var(--shadow-lg);
+    }
+  }
+
+  /* Profile Image */
+
+  & .contact-image {
+    width: 9rem;
+
+    height: 9rem;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    border: 0.4rem solid rgba(37, 99, 235, 0.15);
+
+    & img {
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  /* Contact Details */
+
+  & .contact-details {
+    flex: 1;
+    
+    & h3 {
+      text-transform: capitalize;
+      
+      font-size: 2.2rem;
+      
+      color: var(--heading-color);
+    }
+    
+    & .job-title {
+      text-transform: capitalize;
+      margin-top: 0.5rem;
+
+      font-size: 1.5rem;
+
+      color: var(--primary-color);
+
+      font-weight: 600;
+    }
+  }
+
+  & .contact-info {
+    margin-top: 1.5rem;
+
+    display: grid;
+
+    gap: 0.8rem;
+
+    & p {
+      display: flex;
+
+      align-items: center;
+
+      gap: 0.8rem;
+
+      font-size: 1.4rem;
+
+      color: var(--text-light);
+    }
+
+    & i {
+      font-size: 1.8rem;
+
+      color: var(--primary-color);
+    }
+  }
+
+  /* ******************************************
+            Action Buttons
+******************************************* */
+
+  & .contact-actions {
+    display: flex;
+
+    gap: 1rem;
+
+    & .action-btn {
+      height: 4.2rem;
+
+      padding-inline: 1.5rem;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 0.7rem;
+
+      border-radius: var(--radius-sm);
+
+      font-size: 1.4rem;
+
+      font-weight: 600;
+
+      text-decoration: none;
+
+      cursor: pointer;
+
+      border: none;
+
+      transition: var(--transition);
+
+      & i {
+        font-size: 1.8rem;
+      }
+
+      &:hover {
+        transform: translateY(-0.3rem);
+      }
+    }
+
+    .view-btn {
+      background: rgba(37, 99, 235, 0.1);
+
+      color: var(--primary-color);
+
+      &:hover {
+        background: var(--primary-color);
+
+        color: white;
+      }
+    }
+
+    .edit-btn {
+      background: rgba(16, 185, 129, 0.1);
+
+      color: #059669;
+
+      &:hover {
+        background: #059669;
+
+        color: white;
+      }
+    }
+
+    .delete-btn {
+      background: rgba(239, 68, 68, 0.1);
+
+      color: #dc2626;
+
+      &:hover {
+        background: #dc2626;
+
+        color: white;
+      }
+    }
+  }
+
+  /* ******************************************
+            Empty State
+******************************************* */
+
+  & .contact-empty {
+    display: none;
+
+    text-align: center;
+
+    padding: 5rem;
+
+    & i {
+      font-size: 6rem;
+
+      color: var(--primary-color);
+    }
+
+    & h3 {
+      margin-top: 1rem;
+
+      font-size: 2rem;
+    }
+  }
+}
+
+/* ******************************************
+            Responsive
+******************************************* */
+
+@media (width <= 900px) {
+  .section-dashboard {
+    & .contact-card {
+      flex-direction: column;
+
+      text-align: center;
+    }
+
+    & .contact-actions {
+      justify-content: center;
+
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (width <= 768px) {
+  .section-dashboard {
+    & .dashboard-header {
+      flex-direction: column;
+
+      gap: 2rem;
+    }
+
+    & .welcome-card {
+      flex-direction: column;
+
+      text-align: center;
+
+      gap: 2rem;
+    }
+  }
+}
+
+@media (width <= 480px) {
+  .section-dashboard {
+    & .dashboard-header,
+    & .welcome-card,
+    & .contact-section {
+      padding: 2rem;
+    }
+
+    & .contact-header {
+      flex-direction: column;
+
+      gap: 2rem;
+    }
+  }
+}
